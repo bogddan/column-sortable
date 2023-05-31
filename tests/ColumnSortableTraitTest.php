@@ -42,7 +42,7 @@ class ColumnSortableTraitTest extends \Orchestra\Testbench\TestCase
     public function setUp(): void
     {
         parent::setUp();
-        app()->register(\Kyslik\ColumnSortable\ColumnSortableServiceProvider::class);
+        app()->register(\Bogddan\ColumnSortable\ColumnSortableServiceProvider::class);
 
         config()->set('database.default', 'sqlite');
         config()->set('database.connections.sqlite.database', ':memory:');
@@ -321,7 +321,7 @@ class ColumnSortableTraitTest extends \Orchestra\Testbench\TestCase
 class User extends Model
 {
 
-    use \Kyslik\ColumnSortable\Sortable;
+    use \Bogddan\ColumnSortable\Sortable;
 
     /**
      * @var array
@@ -389,7 +389,7 @@ class Profile extends Model
 class Comment extends Model
 {
 
-    use \Kyslik\ColumnSortable\Sortable;
+    use \Bogddan\ColumnSortable\Sortable;
 
     /**
      * @var array
@@ -416,5 +416,5 @@ class Comment extends Model
 class Post extends Model
 {
 
-    use \Kyslik\ColumnSortable\Sortable;
+    use \Bogddan\ColumnSortable\Sortable;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kyslik\ColumnSortable;
+namespace Bogddan\ColumnSortable;
 
 use BadMethodCallException;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Schema;
-use Kyslik\ColumnSortable\Exceptions\ColumnSortableException;
+use Bogddan\ColumnSortable\Exceptions\ColumnSortableException;
 
 /**
  * Sortable trait.

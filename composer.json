@@ -1,5 +1,5 @@
 {
-    "name": "kyslik/column-sortable",
+    "name": "bogddan/column-sortable",
     "description": "Package for handling column sorting in Laravel 6.x",
     "keywords": [
         "sortable",
@@ -28,13 +28,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Kyslik\\ColumnSortable\\": "src/ColumnSortable/"
+            "Bogddan\\ColumnSortable\\": "src/ColumnSortable/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kyslik\\ColumnSortable\\ColumnSortableServiceProvider"
+                "Bogddan\\ColumnSortable\\ColumnSortableServiceProvider"
             ]
         }
     },

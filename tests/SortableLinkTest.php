@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\HtmlString;
-use Kyslik\ColumnSortable\SortableLink;
+use Bogddan\ColumnSortable\SortableLink;
 
 /**
  * Class SortableLinkTest

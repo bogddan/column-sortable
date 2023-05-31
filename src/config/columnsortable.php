@@ -115,7 +115,7 @@ return [
 
     /*
     join type: join vs leftJoin (default leftJoin)
-    for more information see https://github.com/Kyslik/column-sortable/issues/59
+    for more information see https://github.com/Bogddan/column-sortable/issues/59
     */
     'join_type'                     => 'leftJoin',
 ];

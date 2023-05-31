@@ -1,14 +1,14 @@
 <?php
 
-namespace Kyslik\ColumnSortable;
+namespace Bogddan\ColumnSortable;
 
-use Kyslik\ColumnSortable\Exceptions\ColumnSortableException;
+use Bogddan\ColumnSortable\Exceptions\ColumnSortableException;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Str;
 
 /**
  * Class SortableLink
- * @package Kyslik\ColumnSortable
+ * @package Bogddan\ColumnSortable
  */
 class SortableLink
 {
@@ -17,7 +17,7 @@ class SortableLink
      * @param array $parameters
      *
      * @return string
-     * @throws \Kyslik\ColumnSortable\Exceptions\ColumnSortableException
+     * @throws \Bogddan\ColumnSortable\Exceptions\ColumnSortableException
      */
     public static function render(array $parameters)
     {
@@ -49,7 +49,7 @@ class SortableLink
      * @param array $parameters
      *
      * @return array
-     * @throws \Kyslik\ColumnSortable\Exceptions\ColumnSortableException
+     * @throws \Bogddan\ColumnSortable\Exceptions\ColumnSortableException
      */
     public static function parseParameters(array $parameters)
     {
@@ -73,7 +73,7 @@ class SortableLink
      *
      * @return array
      *
-     * @throws \Kyslik\ColumnSortable\Exceptions\ColumnSortableException
+     * @throws \Bogddan\ColumnSortable\Exceptions\ColumnSortableException
      */
     public static function explodeSortParameter($parameter)
     {
@@ -268,7 +268,7 @@ class SortableLink
         }
 
         unset($anchorAttributes['href']);
-        
+
         $attributes = [];
         foreach ($anchorAttributes as $k => $v) {
             $attributes[] = $k.('' != $v ? '="'.$v.'"' : '');

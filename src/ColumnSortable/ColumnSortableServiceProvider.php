@@ -1,13 +1,13 @@
 <?php
 
-namespace Kyslik\ColumnSortable;
+namespace Bogddan\ColumnSortable;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class ColumnSortableServiceProvider
- * @package Kyslik\ColumnSortable
+ * @package Bogddan\ColumnSortable
  */
 class ColumnSortableServiceProvider extends ServiceProvider
 {
@@ -34,7 +34,7 @@ class ColumnSortableServiceProvider extends ServiceProvider
         Blade::directive('sortablelink', function ($expression) {
             $expression = ($expression[0] === '(') ? substr($expression, 1, -1) : $expression;
 
-            return "<?php echo \Kyslik\ColumnSortable\SortableLink::render(array ({$expression}));?>";
+            return "<?php echo \Bogddan\ColumnSortable\SortableLink::render(array ({$expression}));?>";
         });
 
         request()->macro('allFilled', function (array $keys) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kyslik\ColumnSortable\Exceptions;
+namespace Bogddan\ColumnSortable\Exceptions;
 
 use Exception;
 
