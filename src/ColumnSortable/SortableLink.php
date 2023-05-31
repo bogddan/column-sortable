@@ -279,12 +279,9 @@ class SortableLink
 
     private static function buildUrl($queryString, $anchorAttributes)
     {
-        if(!isset($anchorAttributes['href']))
-        {
+        if(!isset($anchorAttributes['href'])) {
             return url(request()->path() . "?" . $queryString);
-        }
-        else
-        {
+        } else {
             return url($anchorAttributes['href'] . "?" . $queryString);
         }
     }
