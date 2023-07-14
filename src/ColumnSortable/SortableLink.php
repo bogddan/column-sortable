@@ -245,10 +245,12 @@ class SortableLink
     {
         $checkStrlenOrArray = static fn($element) => \is_array($element) ? $element : \strlen($element);
 
-        $persistParameters = array_diff(
-            array_filter(request()->except(['sort', 'direction', 'page']), $checkStrlenOrArray),
-            config('request.persist.ignore')
-        );
+        $exceptValues = request()->except(array_merge(
+            ['sort', 'direction', 'page'],
+            config('columnsortable.request_persist_ignore', [])
+        ));
+
+        $persistParameters = array_filter($exceptValues, $checkStrlenOrArray);
 
         return http_build_query(array_merge($queryParameters, $persistParameters, [
             'sort' => $sortParameter,
