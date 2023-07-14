@@ -165,7 +165,7 @@ trait Sortable
             if ($subModel) {
                 $column = $subModel->getTable() . '.' . $column;
             } else {
-                $column = $model->getTable() . '.' . $column;
+                // $column = $model->getTable() . '.' . $column;
             }
             $query = $query->orderBy($column, $direction);
         }
