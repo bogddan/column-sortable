@@ -239,25 +239,21 @@ class SortableLink
 
 
     /**
-     * @param $queryParameters
-     * @param $sortParameter
-     * @param $direction
-     *
-     * @return string
+     * Build query string for elements link
      */
-    private static function buildQueryString($queryParameters, $sortParameter, $direction)
+    private static function buildQueryString(array $queryParameters, string $sortParameter, string $direction): string
     {
-        $checkStrlenOrArray = function ($element) {
-            return is_array($element) ? $element : strlen($element);
-        };
+        $checkStrlenOrArray = static fn($element) => \is_array($element) ? $element : \strlen($element);
 
-        $persistParameters = array_filter(request()->except('sort', 'direction', 'page'), $checkStrlenOrArray);
-        $queryString       = http_build_query(array_merge($queryParameters, $persistParameters, [
-            'sort'      => $sortParameter,
+        $persistParameters = array_diff(
+            array_filter(request()->except(['sort', 'direction', 'page']), $checkStrlenOrArray),
+            config('request.persist.ignore')
+        );
+
+        return http_build_query(array_merge($queryParameters, $persistParameters, [
+            'sort' => $sortParameter,
             'direction' => $direction,
         ]));
-
-        return $queryString;
     }
 
 
