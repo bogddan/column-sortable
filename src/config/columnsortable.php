@@ -122,5 +122,5 @@ return [
     /*
      * Ignore from request persist values in sort link
     */
-    'request.persist.ignore' => [],
+    'request_persist_ignore' => [],
 ];
